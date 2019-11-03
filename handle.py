@@ -12,5 +12,5 @@ import classify
 
 # Iterate through messages and calcuklate all relevant scores
 output = []
-for item in bullshits.messages:
+for item in get_bullshits.messages:
     output.append(vars(classify.Message(item["message"])))
