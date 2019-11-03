@@ -4,7 +4,7 @@
 # Import bullshits from the API
 import get_bullshits
 
-# We use static messages so API doesn't get unnecessary load
+# We use static messages for dev so API doesn't get unnecessary load
 # import bullshits 
 
 # Import classification module
