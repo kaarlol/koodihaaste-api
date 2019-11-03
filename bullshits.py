@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Messages in static format so we don't use API for now reason when testing
 messages = [
     {
         "message": "Ymnwchöjeieg hyofyoy fdigqyipiijhg oyooymd qwntito fönfpngddooj ddfnp idhdfö jwoipnic dkdykd."

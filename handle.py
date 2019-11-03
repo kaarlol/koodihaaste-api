@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#import get_bullshits
-import bullshits
+# Import bullshits from the API
+import get_bullshits
+
+# We use static messages so API doesn't get unnecessary load
+# import bullshits 
+
+# Import classification module
 import classify
 
+# Iterate through messages and calcuklate all relevant scores
 output = []
 for item in bullshits.messages:
     output.append(vars(classify.Message(item["message"])))

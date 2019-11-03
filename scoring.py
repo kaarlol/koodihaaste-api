@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Define class to score messages based on indivudual characters
 class Letter_scoring(object):
     def __init__(self, rules):
         self.rules = rules
@@ -15,12 +16,14 @@ class Letter_scoring(object):
                 consonant.append(character["letter"])
         self.consonant = consonant
 
+    # Count a score based on letter frequency in Finnish language
     def letter_score(self, message):
         letter_score = 0
         for item in self.rules:
             letter_score += message.count(item["letter"]) * item["frequency"]
         return letter_score
 
+    # Check that words' last letters are not invalid for Finnish language
     def last_letter_score(self, message):
         words = message.split()
         last_letter_score = 0
@@ -29,6 +32,7 @@ class Letter_scoring(object):
                 last_letter_score -= 1
         return last_letter_score
 
+    # Check words' last two letters
     def last_two_letter_score(self, message):
         words = message[:-1].split()
         last_two_letter_score = 0
@@ -37,6 +41,7 @@ class Letter_scoring(object):
                 last_two_letter_score -= 1
         return last_two_letter_score
 
+    # Check that first two letters don't break Finnish language rules
     def first_two_letter_score(self, message):
         words = message[:-1].split()
         first_two_letter_score = 0
@@ -45,6 +50,7 @@ class Letter_scoring(object):
                 first_two_letter_score -= 1
         return first_two_letter_score
 
+    # Check for words fonotactics, for example "a" and "ä" can't be in same word
     def fonotactics_score(self, message):
         words = message.split()
         fonotactics_score = 0
@@ -63,6 +69,7 @@ class Letter_scoring(object):
                     fonotactics_score -= 1
         return fonotactics_score
 
+# Define class to score messages based on words in the
 class Word_scoring(object):
     def __init__(self, wordfile, sep=' '):
         self.words = {}
@@ -75,6 +82,7 @@ class Word_scoring(object):
         for key in self.words.keys():
             self.words[key] = self.words[key] / self.N
    
+    # Score message based on Finnish word frequency
     def frequency_score(self, message):
         score = 0
         words = message[:-1].split()
