@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+letters = [
+    {"letter": "a", "frequency": 0.1162217, "type": "vowel",
+        "can_end": True, "fonotactics": "back"},
+    {"letter": "b", "frequency": 0.0005255, "type": "consonant", "can_end": False},
+    {"letter": "c", "frequency": 0.0002775, "type": "consonant", "can_end": False},
+    {"letter": "d", "frequency": 0.0084236, "type": "consonant", "can_end": False},
+    {"letter": "e", "frequency": 0.0821028, "type": "vowel",
+        "can_end": True, "fonotactics": "neutral"},
+    {"letter": "f", "frequency": 0.0004915, "type": "consonant", "can_end": False},
+    {"letter": "g", "frequency": 0.0010549, "type": "consonant", "can_end": False},
+    {"letter": "h", "frequency": 0.0182819, "type": "consonant", "can_end": False},
+    {"letter": "i", "frequency": 0.1070774, "type": "vowel",
+        "can_end": True, "fonotactics": "neutral"},
+    {"letter": "j", "frequency": 0.0191665, "type": "consonant", "can_end": False},
+    {"letter": "k", "frequency": 0.0524687, "type": "consonant", "can_end": False},
+    {"letter": "l", "frequency": 0.0575904, "type": "consonant", "can_end": True},
+    {"letter": "m", "frequency": 0.0350614, "type": "consonant", "can_end": False},
+    {"letter": "n", "frequency": 0.0867008, "type": "consonant", "can_end": True},
+    {"letter": "o", "frequency": 0.0534021, "type": "vowel",
+        "can_end": True, "fonotactics": "back"},
+    {"letter": "p", "frequency": 0.0166088, "type": "consonant", "can_end": False},
+    {"letter": "q", "frequency": 6.6e-06, "type": "consonant", "can_end": False},
+    {"letter": "r", "frequency": 0.0217664, "type": "consonant", "can_end": False},
+    {"letter": "s", "frequency": 0.0786119, "type": "consonant", "can_end": True},
+    {"letter": "t", "frequency": 0.0987791, "type": "consonant", "can_end": True},
+    {"letter": "u", "frequency": 0.05049, "type": "vowel",
+        "can_end": True, "fonotactics": "back"},
+    {"letter": "v", "frequency": 0.0244758, "type": "consonant", "can_end": False},
+    {"letter": "w", "frequency": 8.36e-05, "type": "consonant", "can_end": False},
+    {"letter": "x", "frequency": 0, "type": "consonant", "can_end": False},
+    {"letter": "y", "frequency": 0.0180697, "type": "vowel",
+        "can_end": True, "fonotactics": "front"},
+    {"letter": "z", "frequency": 0, "type": "consonant", "can_end": False},
+    {"letter": "å", "frequency": 1.3e-05, "type": "vowel",
+        "can_end": True, "fonotactics": "neutral"},
+    {"letter": "ä", "frequency": 0.0475079, "type": "vowel",
+        "can_end": True, "fonotactics": "front"},
+    {"letter": "ö", "frequency": 0.0047406, "type": "vowel",
+        "can_end": True, "fonotactics": "front"}
+]
+
+alphabet = "".join(letter["letter"] for letter in letters) 
